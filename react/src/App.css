@@ -1,0 +1,212 @@
+body {
+  font-family: math;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.headingH1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 12px;
+}
+.headingH2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 12px;
+}
+.headingH3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.unorderlist ul li::marker {
+  font-size: 22px !important;
+}
+.unorderlist ul li {
+  list-style: disc;
+  margin-left: 20px;
+}
+.headingH4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 12px;
+}
+.serviceList li {
+  margin-bottom: 8px;
+  list-style-type: circle;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  max-width: 1500px;
+}
+header .close-menu,
+.open-menu {
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+
+header .open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 38px;
+}
+
+header .close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+header #check {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  header .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: #334023;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+
+  header .menu li {
+    margin-top: 6px;
+  }
+
+  header .menu li {
+    padding: 10px;
+  }
+
+  header .close-menu,
+  .open-menu {
+    display: block;
+  }
+
+  header #check:checked~.menu {
+    right: 0;
+  }
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container img {
+  transition: transform 0.3s ease;
+}
+
+.img-container::before,
+.img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.img-container::before {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.img-container:hover::before {
+  opacity: 1;
+}
+
+.img-container::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  transform: scale(0);
+  background: #c19b575c;
+  opacity: 0;
+}
+
+.img-container:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.img-container:hover img {
+  transform: scale(1.1);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  z-index: 9999 !important;
+  background-color: #334023e3 !important;
+}
+
+.shadow-custom-div {
+  box-shadow: 20px -20px 3px #c19b57;
+}
+
+.itemsstyle video {
+  object-fit: cover !important;
+}
+.gymrule {
+  box-shadow: -7px 7px 0px #334023;
+}
+.gymrule1 {
+  box-shadow: -7px 7px 0px #c19b57;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
