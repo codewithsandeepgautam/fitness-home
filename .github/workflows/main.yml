@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd my-app
+          cd fitness-home/react
           npm install
 
       - name: Build project
